@@ -23,7 +23,7 @@ function Home() {
     setSearch(e.target.value);
   };
 
-  const filteredMovies = b?.filter((movie) => movie.original_title.toLowerCase().includes(search.toLowerCase()));
+  const filteredMovies = b?.filter((m) => m.original_title.toLowerCase().includes(search.toLowerCase()));
 
   if (moviesList.length === 0) {
     return (
