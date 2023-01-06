@@ -23,7 +23,7 @@ function Home() {
     setSearch(e.target.value);
   };
 
-  const filteredMovies = b?.filter((m) => m.original_title.toLowerCase().includes(search.toLowerCase()));
+  const filtered = b?.filter((m) => m.original_title.toLowerCase().includes(search.toLowerCase()));
 
   if (moviesList.length === 0) {
     return (
@@ -39,11 +39,11 @@ function Home() {
     <div className="home-container">
       <Header search={search} handleSearch={handleSearch} />
       <div className="moviesList-container">
-        {filteredMovies?.map((m) => (
+        {filtered?.map((m) => (
           <Movie movie={m} key={m.id} id={m.id} />
         ))}
         ,
-        {filteredMovies?.length === 0 && <NotFound />}
+        {filtered?.length === 0 && <NotFound />}
       </div>
     </div>
   );
