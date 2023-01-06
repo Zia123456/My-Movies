@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { SetselectedMovie } from './redux/Api';
+import { SetselectedMovie } from './redux/MovieSlice';
 
 function Movie({ movie }) {
   const baseUrl = 'https://image.tmdb.org/t/p/w500/';

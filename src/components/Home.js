@@ -1,14 +1,8 @@
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable no-unused-vars */
-/* eslint-disable function-paren-newline */
-/* eslint-disable implicit-arrow-linebreak */
 import React, { useEffect, useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { getMovies } from './redux/Api';
+import { getMovies } from './redux/MovieSlice';
 import Movie from './Movie';
-import Search from './Search';
 import Header from './Header';
 import NotFound from './NotFound';
 
@@ -29,15 +23,13 @@ function Home() {
     setSearch(e.target.value);
   };
 
-  const filteredMovies = b?.filter((movie) =>
-    movie.original_title.toLowerCase().includes(search.toLowerCase()),
-  );
+  const filteredMovies = b?.filter((movie) => movie.original_title.toLowerCase().includes(search.toLowerCase()));
 
   if (moviesList.length === 0) {
     return (
       <div className="loading-container">
         <Header />
-        <div className="circle"></div>
+        <div className="circle" />
         <h1 className="loading">Loading...</h1>
       </div>
     );
@@ -50,7 +42,8 @@ function Home() {
         {filteredMovies?.map((m) => (
           <Movie movie={m} key={m.id} id={m.id} />
         ))}
-        ,{filteredMovies?.length === 0 && <NotFound />}
+        ,
+        {filteredMovies?.length === 0 && <NotFound />}
       </div>
     </div>
   );
