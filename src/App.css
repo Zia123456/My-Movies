@@ -5,7 +5,7 @@
 
 .navBar-container {
   width: 100%;
-  margin-top: -60px;
+  margin-top: -50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,40 +55,35 @@
 }
 
 .movie-container {
-  width: 130px;
+  width: 165px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-bottom: 10px;
-  border: 1px solid rgb(245, 247, 242);
-  border-radius: 8px;
 }
 
 .movie-container:hover {
   transition: 500ms;
-  width: 150px;
+  width: 185px;
   box-shadow: rgba(255, 255, 255, 0.5) 0 12px 30px 5px;
 }
 
 .poster-img {
-  width: 130px;
-  border-radius: 8px;
+  width: 165px;
 }
 
 .poster-img:hover {
   transition: 500ms;
-  width: 150px;
+  width: 185px;
 }
 
 .moviesList-container {
-  margin-top: 60px;
-  padding: 20px;
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
   background-color: rgb(11, 11, 11);
 }
 

@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -34,7 +33,7 @@ const MovieDetails = () => {
         </span>
         <span className="text">
           <h3>Original Language: </h3>
-          <p> {movie.original_language}</p>
+          <p>{movie.original_language}</p>
         </span>
         <span className="text">
           <h3>Overview:</h3>
