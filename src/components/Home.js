@@ -2,12 +2,12 @@
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable react/jsx-one-expression-per-line */
 import React, { useEffect, useState } from 'react';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { getMovies } from './redux/MovieSlice';
 import Movie from './Movie';
 import Header from './Header';
 import NotFound from './NotFound';
+import Logo from './home-page-logo.png';
 
 function Home() {
   const moviesList = useSelector((state) => state.movies.movies);
@@ -44,6 +44,13 @@ function Home() {
     <div className="home-container">
       <Header search={search} handleSearch={handleSearch} />
       <div className="main-moviesList-container">
+        <div className="home-logo-container">
+          <img src={Logo} className="home-page-logo" alt="Logo" />
+          <div>
+            <h1>My Movies</h1>
+            <p>{filtered.length} movies are available</p>
+          </div>
+        </div>
         <div className="moviesList-container">
           {filtered?.map((m) => (
             <Movie movie={m} key={m.id} id={m.id} />
