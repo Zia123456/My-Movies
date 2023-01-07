@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import backArrow from './back-arrow.png';
 
-function MovieDetails() {
+const MovieDetails = () => {
   const movie = useSelector((state) => state.movies.selectedMovie);
   const baseUrl = 'https://image.tmdb.org/t/p/w500/';
   const posterPath = movie.poster_path;
@@ -55,6 +55,6 @@ function MovieDetails() {
       </div>
     </div>
   );
-}
+};
 
 export default MovieDetails;

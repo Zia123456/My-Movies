@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -23,7 +22,6 @@ function Movie({ movie }) {
           alt="poster"
         />
       </div>
-      <span className="title-text">{movie.original_title}</span>
       <Link
         onClick={() => {
           handleFetchingMovie(movie);
